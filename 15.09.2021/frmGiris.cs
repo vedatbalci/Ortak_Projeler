@@ -71,7 +71,7 @@ namespace frm_Telefon_Rehberi_Ajanda
                 cmd1.Parameters.AddWithValue("@si", txtSifre.Text.ToString());
                 cmd1.ExecuteNonQuery();
                 con.Close();
-
+                con.Close();
 
 
 
