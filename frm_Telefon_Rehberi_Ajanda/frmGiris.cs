@@ -79,39 +79,39 @@ namespace frm_Telefon_Rehberi_Ajanda
             try
             {
                 con.Open();
-            string sql = "Select * from Sifreler where Adi=@adi AND Sifresi=@sifresi";
+                string sql = "Select * from Sifreler where Adi=@adi AND Sifresi=@sifresi";
 
-            SqlParameter sql1 = new SqlParameter("adi", txtKullaniciAdi.Text.Trim());
-            SqlParameter sql2 = new SqlParameter("sifresi", txtSifre.Text.Trim());
-            SqlCommand komut = new SqlCommand(sql, con);
-            komut.Parameters.Add(sql1);
-            komut.Parameters.Add(sql2);
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(komut);
-            da.Fill(dt);
-            con.Close();
-            if (dt.Rows.Count > 0)
-            {
-                frmtelefonrehberi frm = new frmtelefonrehberi();
-                frm.Show();
-
-                this.Hide();
-                con.Open();
-                
-                SqlCommand cmd1 = new SqlCommand("insert into kayitliSifreler (KulAdi,Sifre) values (@adi,@si)", con);
-                cmd1.Parameters.AddWithValue("@adi", txtKullaniciAdi.Text.ToString());
-                cmd1.Parameters.AddWithValue("@si", txtSifre.Text.ToString());
-                cmd1.ExecuteNonQuery();
+                SqlParameter sql1 = new SqlParameter("adi", txtKullaniciAdi.Text.Trim());
+                SqlParameter sql2 = new SqlParameter("sifresi", txtSifre.Text.Trim());
+                SqlCommand komut = new SqlCommand(sql, con);
+                komut.Parameters.Add(sql1);
+                komut.Parameters.Add(sql2);
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(komut);
+                da.Fill(dt);
                 con.Close();
+                if (dt.Rows.Count > 0)
+                {
+                    frmtelefonrehberi frm = new frmtelefonrehberi();
+                    frm.Show();
+
+                    this.Hide();
+                    con.Open();
+
+                    SqlCommand cmd1 = new SqlCommand("insert into kayitliSifreler (KulAdi,Sifre) values (@adi,@si)", con);
+                    cmd1.Parameters.AddWithValue("@adi", txtKullaniciAdi.Text.ToString());
+                    cmd1.Parameters.AddWithValue("@si", txtSifre.Text.ToString());
+                    cmd1.ExecuteNonQuery();
+                    con.Close();
 
 
 
 
-            }
-            else
-            {
-                MessageBox.Show("Hatalı Giriş Yaptınız !");
-            }
+                }
+                else
+                {
+                    MessageBox.Show("Hatalı Giriş Yaptınız !");
+                }
 
             }
             catch (Exception)

@@ -166,7 +166,7 @@ namespace frm_Telefon_Rehberi_Ajanda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 274);
+            this.ClientSize = new System.Drawing.Size(496, 276);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.pictureBox1);
