@@ -1,0 +1,45 @@
+C:\Users\LAB5-OGR12\source\repos\Yeni klasör\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csproj.AssemblyReference.cache
+C:\Users\LAB5-OGR12\source\repos\Yeni klasör\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmGiris.resources
+C:\Users\LAB5-OGR12\source\repos\Yeni klasör\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.Properties.Resources.resources
+C:\Users\LAB5-OGR12\source\repos\Yeni klasör\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csproj.GenerateResource.cache
+C:\Users\LAB5-OGR12\source\repos\Yeni klasör\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csproj.CoreCompileInputs.cache
+C:\Users\LAB5-OGR12\source\repos\Yeni klasör\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.exe.config
+C:\Users\LAB5-OGR12\source\repos\Yeni klasör\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.exe
+C:\Users\LAB5-OGR12\source\repos\Yeni klasör\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.pdb
+C:\Users\LAB5-OGR12\source\repos\Yeni klasör\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.exe
+C:\Users\LAB5-OGR12\source\repos\Yeni klasör\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.pdb
+C:\Users\LAB5-OGR12\source\repos\Yeni klasör\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmtelefonrehberi.resources
+D:\bilişim dersi nesne tabanlı\Projeler\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.exe.config
+D:\bilişim dersi nesne tabanlı\Projeler\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.exe
+D:\bilişim dersi nesne tabanlı\Projeler\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.pdb
+D:\bilişim dersi nesne tabanlı\Projeler\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csprojAssemblyReference.cache
+D:\bilişim dersi nesne tabanlı\Projeler\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmGiris.resources
+D:\bilişim dersi nesne tabanlı\Projeler\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmtelefonrehberi.resources
+D:\bilişim dersi nesne tabanlı\Projeler\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.Properties.Resources.resources
+D:\bilişim dersi nesne tabanlı\Projeler\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csproj.GenerateResource.cache
+D:\bilişim dersi nesne tabanlı\Projeler\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csproj.CoreCompileInputs.cache
+D:\bilişim dersi nesne tabanlı\Projeler\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.exe
+D:\bilişim dersi nesne tabanlı\Projeler\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.pdb
+C:\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.exe.config
+C:\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.exe
+C:\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.pdb
+C:\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csproj.AssemblyReference.cache
+C:\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmGiris.resources
+C:\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmtelefonrehberi.resources
+C:\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.Properties.Resources.resources
+C:\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csproj.GenerateResource.cache
+C:\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csproj.CoreCompileInputs.cache
+C:\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.exe
+C:\14.09.2021\frm_Telefon_Rehberi_Ajanda\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.pdb
+C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.exe.config
+C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.exe
+C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.pdb
+C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csprojAssemblyReference.cache
+C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmGiris.resources
+C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmtelefonrehberi.resources
+C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.Properties.Resources.resources
+C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csproj.GenerateResource.cache
+C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csproj.CoreCompileInputs.cache
+C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.exe
+C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.pdb
+C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmAcilis.resources
