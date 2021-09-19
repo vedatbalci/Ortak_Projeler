@@ -43,3 +43,26 @@ C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\obj\Debug\
 C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.exe
 C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.pdb
 C:\Users\Vedat Balcı\Downloads\Compressed\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmAcilis.resources
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csprojAssemblyReference.cache
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmAcilis.resources
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmGiris.resources
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmtelefonrehberi.resources
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.Properties.Resources.resources
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csproj.GenerateResource.cache
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csproj.CoreCompileInputs.cache
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.exe
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.pdb
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.exe.config
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.exe
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\bin\Debug\frm_Telefon_Rehberi_Ajanda.pdb
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\Interop.WMPLib.dll
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.csproj.ResolveComReference.cache
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmRadyo.resources
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\bin\Debug\Interop.WMPLib.dll
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\frm_Telefon_Rehberi_Ajanda.frmAjanda.resources
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\Interop.MediaPlayer.dll
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\Interop.WMLSS.dll
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\Interop.WMPDXMLib.dll
+C:\Users\Vedat Balcı\Documents\github\VS 2017\Ortak_Projeler\frm_Telefon_Rehberi_Ajanda\obj\Debug\Interop.WMPLauncher.dll

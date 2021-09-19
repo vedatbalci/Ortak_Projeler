@@ -61,6 +61,15 @@ namespace frm_Telefon_Rehberi_Ajanda.Properties {
         }
         
         /// <summary>
+        ///   System.IO.MemoryStream öğesine benzeyen System.IO.UnmanagedMemoryStream türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Alarm01 {
+            get {
+                return ResourceManager.GetStream("Alarm01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
         internal static System.Drawing.Bitmap Okul_Şirket_Logosu {

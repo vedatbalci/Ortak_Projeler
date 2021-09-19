@@ -127,14 +127,15 @@ namespace frm_Telefon_Rehberi_Ajanda
         {
             if (checkBox1.Checked)
             {
-                checkBox1.Text = "Şifreyi Göster";
-                //karakteri göster.
+                checkBox1.Text = "Şifreyi Gizle";
+                
                 txtSifre.PasswordChar = '\0';
             }
-            //değilse karakterlerin yerine * koy.
+            
             else
             {
-                checkBox1.Text = "Şifreyi Gizle";
+                checkBox1.Text = "Şifreyi Göster";
+               
                 txtSifre.PasswordChar = '*';
             }
         }

@@ -153,51 +153,58 @@ namespace frm_Telefon_Rehberi_Ajanda
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            dataGridView1.Visible = false;
-            listBox1.Visible = true;
-
-            XmlDocument xml = new XmlDocument();
-            xml.Load(hava);
-            XmlElement document = xml.DocumentElement;
-            XmlNodeList nodeList = document.SelectNodes("sehirler");
-            CreateParams create = new CreateParams();
-
-            foreach (XmlNode node in nodeList)
+            try
             {
-                string ili = node["ili"].InnerText;
-                string durum = node["Durum"].InnerText;
-                string sicaklik = node["Mak"].InnerText;
-                DataGridViewRow row = (DataGridViewRow)dataGridView2.Rows[0].Clone();
+                dataGridView1.Visible = false;
+                listBox1.Visible = true;
 
-                row.Cells[0].Value = ili;
-                row.Cells[1].Value = durum;
-                row.Cells[2].Value = sicaklik;
-                dataGridView2.Rows.Add();
-                //    }
-                //}
-                //catch (Exception)
-                //{
-                //    MessageBox.Show("Lütfen İnternet Bağlantınızı Kontrol Ediniz");
-                //}
-                string url = "https://www.mgm.gov.tr/FTPDATA/analiz/sonSOA.xml";
-                xdoc.Load(url);
-                XmlNodeList secilenil = xdoc.DocumentElement.SelectNodes("sehirler");
-                foreach (XmlNode istanbul in secilenil)
+                XmlDocument xml = new XmlDocument();
+                xml.Load(hava);
+                XmlElement document = xml.DocumentElement;
+                XmlNodeList nodeList = document.SelectNodes("sehirler");
+                CreateParams create = new CreateParams();
+
+                foreach (XmlNode node in nodeList)
                 {
-                    string ili1 = istanbul.SelectSingleNode("ili").InnerText;
-                    if (ili == "HATAY")
+                    string ili = node["ili"].InnerText;
+                    string durum = node["Durum"].InnerText;
+                    string sicaklik = node["Mak"].InnerText;
+                    DataGridViewRow row = (DataGridViewRow)dataGridView2.Rows[0].Clone();
+
+                    row.Cells[0].Value = ili;
+                    row.Cells[1].Value = durum;
+                    row.Cells[2].Value = sicaklik;
+                    dataGridView2.Rows.Add();
+                    //    }
+                    //}
+                    //catch (Exception)
+                    //{
+                    //    MessageBox.Show("Lütfen İnternet Bağlantınızı Kontrol Ediniz");
+                    //}
+                    string url = "https://www.mgm.gov.tr/FTPDATA/analiz/sonSOA.xml";
+                    xdoc.Load(url);
+                    XmlNodeList secilenil = xdoc.DocumentElement.SelectNodes("sehirler");
+                    foreach (XmlNode istanbul in secilenil)
                     {
-                        string Durum = istanbul.SelectSingleNode("Durum").InnerText;
-                        string Mak = istanbul.SelectSingleNode("Mak").InnerText;
-                        listBox1.Items.Add(ili1);
-                        listBox1.Items.Add(Durum);
-                        listBox1.Items.Add(Mak);
+                        string ili1 = istanbul.SelectSingleNode("ili").InnerText;
+                        if (ili == "HATAY")
+                        {
+                            string Durum = istanbul.SelectSingleNode("Durum").InnerText;
+                            string Mak = istanbul.SelectSingleNode("Mak").InnerText;
+                            listBox1.Items.Add(ili1);
+                            listBox1.Items.Add(Durum);
+                            listBox1.Items.Add(Mak);
+                        }
                     }
                 }
             }
-
+            catch (Exception)
+            {
+                MessageBox.Show("Uyarı","Lütfen internet bağlantınızı kontrol ediniz !!",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                listBox1.Visible = false;
+                dataGridView1.Visible = true;
+                KayitlariListele();
+            }
 
         }
 
