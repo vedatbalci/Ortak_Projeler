@@ -147,6 +147,7 @@
     <None Include="Evdeki_bligsayar_baglantisi.xss">
       <DependentUpon>Evdeki_bligsayar_baglantisi.xsd</DependentUpon>
     </None>
+    <None Include="Veritabanı\Kisler.bak" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
