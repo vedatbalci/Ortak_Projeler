@@ -26,6 +26,7 @@ namespace frm_Telefon_Rehberi_Ajanda
         //Merhaba Arkadaşlar
         //Provider=SQLNCLI11;Data Source=DESKTOP-8J65VLQ\MSSQLSERVER2017;Integrated Security=SSPI;Initial Catalog=telefon_rehberi_ajanda
         //Data Source=DESKTOP-8J65VLQ\MSSQLSERVER2017;Initial Catalog=telefon_rehberi_ajanda;Integrated Security=True
+        //adapfkfdsogjdsoıgaoıjdaopjfpıajfo9pjfpaeofpjwo80opro3pjr
         public frmGiris()
         {
             InitializeComponent();
