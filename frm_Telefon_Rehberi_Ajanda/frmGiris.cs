@@ -20,6 +20,9 @@ namespace frm_Telefon_Rehberi_Ajanda
         //nsdjksbfseadljkfnsedlfnbwselnıkf
         //Merhaba Arkadaşlar
         //sssssss
+        /// <summary>
+        /// asdasdasdasdasdasd
+        /// </summary>
         //Merhaba Arkadaşlar
         //Provider=SQLNCLI11;Data Source=DESKTOP-8J65VLQ\MSSQLSERVER2017;Integrated Security=SSPI;Initial Catalog=telefon_rehberi_ajanda
         //Data Source=DESKTOP-8J65VLQ\MSSQLSERVER2017;Initial Catalog=telefon_rehberi_ajanda;Integrated Security=True
