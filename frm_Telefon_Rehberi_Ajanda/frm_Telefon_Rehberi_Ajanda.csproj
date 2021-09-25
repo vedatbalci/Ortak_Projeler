@@ -147,7 +147,7 @@
     <None Include="Evdeki_bligsayar_baglantisi.xss">
       <DependentUpon>Evdeki_bligsayar_baglantisi.xsd</DependentUpon>
     </None>
-    <None Include="Veritabanı\Kisler.bak" />
+    <None Include="Veritabanı\Kisiler.bak" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -176,14 +176,14 @@
     <None Include="resimler\şifre-yöneticisi2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Müzikler\Alarm01.wav" />
+    <None Include="Müzikler\Alarm01.wav" />
     <Content Include="people-character-avatar-person-icon-600w-1288182733.ico" />
-    <EmbeddedResource Include="Resources\Alarm01.wav" />
+    <None Include="Resources\Alarm01.wav" />
     <EmbeddedResource Include="resimler\Okul Şirket Logosu - Kopyala.png" />
-    <EmbeddedResource Include="Resources\Okul Şirket Logosu.png" />
+    <None Include="Resources\Okul Şirket Logosu.png" />
     <EmbeddedResource Include="resimler\Okul Şirket Logosu.png" />
     <Content Include="resimler\people-character-avatar-person-icon-600w-1288182733.jpg" />
-    <EmbeddedResource Include="Resources\şifre_yöneticisi2.jpg" />
+    <None Include="Resources\şifre_yöneticisi2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AxWMPLib">

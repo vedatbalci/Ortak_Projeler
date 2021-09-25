@@ -16,7 +16,7 @@ namespace frm_Telefon_Rehberi_Ajanda
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAcilis());
+            Application.Run(new frmtelefonrehberi());
         }
     }
 }

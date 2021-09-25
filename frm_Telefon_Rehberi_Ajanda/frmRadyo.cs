@@ -24,17 +24,43 @@ namespace frm_Telefon_Rehberi_Ajanda
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked==true)
+            if (radioButton1.Checked == true)
             {
-                
-                
+
+                axWindowsMediaPlayer1.URL = "http://37.247.98.8/stream/166/";
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+            }
+            else if (radioButton2.Checked == true)
+            {
+                axWindowsMediaPlayer1.URL = "http://37.247.98.8/stream/30/";
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+            }
+            else if (radioButton3.Checked == true)
+            {
+                axWindowsMediaPlayer1.URL = "http://37.247.98.8/stream/25/";
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+            }
+            else if (radioButton4.Checked == true)
+            {
+                axWindowsMediaPlayer1.URL = "http://37.247.98.8/stream/33/;?type=http&nocache=23345";
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+            }
+            else if (radioButton4.Checked == true)
+            {
+                axWindowsMediaPlayer1.URL = "http://37.247.98.8/stream/33/;?type=http&nocache=23345";
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+            }
+            else if (radioButton5.Checked == true)
+            {
+                axWindowsMediaPlayer1.URL = "http://yayin1.yayindakiler.com:3016/renk";
+                axWindowsMediaPlayer1.Ctlcontrols.play();
             }
             else
             {
                 MessageBox.Show("Uyarı", "Lütfen bir radyo kanalı seçiniz", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            axWindowsMediaPlayer1.URL = "https://www.harsitvadisi.com/guncel-radyo-url-adresleri.html#:~:text=https%3A//trkvz-radyolar.ercdn.net/ahaberradyo/playlist.m3u8";
-            axWindowsMediaPlayer1.Ctlcontrols.play();
+
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -45,7 +71,7 @@ namespace frm_Telefon_Rehberi_Ajanda
         private void button4_Click(object sender, EventArgs e)
         {
 
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -56,6 +82,11 @@ namespace frm_Telefon_Rehberi_Ajanda
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.settings.volume = trackBar1.Value;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
