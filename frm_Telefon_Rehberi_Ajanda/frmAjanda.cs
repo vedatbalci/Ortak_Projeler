@@ -77,15 +77,14 @@ namespace frm_Telefon_Rehberi_Ajanda
             ////string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "<istediğiniz isim>.<dosya uzantısı>");
             //  File.WriteAllBytes(fileName, Properties.Resources.Alarm01);
             //  wmp.URL = ufileName;
-            wmp.controls.play(); // Sesi çalıştırma
-            wmp.controls.stop(); // Sesi durdurma
+            
             con.Open();
             SqlCommand cmd = new SqlCommand("INSERT INTO Ajanda (istarihi,iskonusu,issaati) VALUES (@is,@konu,@iş)", con);
             // cmd.Parameters.AddWithValue("@ProgramDosyasi", dataGridView1.CurrentRow.Cells[1].Value.ToString());
 
             cmd.Parameters.AddWithValue("@is", dateTimePicker1.Text.ToString());            
             cmd.Parameters.AddWithValue("@konu", richTextBox1.Text);
-            cmd.Parameters.AddWithValue("@iş", dateTimePicker2.Value.ToString());
+            cmd.Parameters.AddWithValue("@iş", dateTimePicker2.Text.ToString());
             cmd.ExecuteNonQuery();
             con.Close();
             //con.Dispose();
@@ -152,7 +151,7 @@ namespace frm_Telefon_Rehberi_Ajanda
             // cmd.Parameters.AddWithValue("@ProgramDosyasi", dataGridView1.CurrentRow.Cells[1].Value.ToString());
             cmd.Parameters.AddWithValue("@is",dateTimePicker1.Text.ToString());
             cmd.Parameters.AddWithValue("@konu", richTextBox1.Text.ToString());
-            cmd.Parameters.AddWithValue("@saat", dateTimePicker2.Value.ToString());
+            cmd.Parameters.AddWithValue("@saat", dateTimePicker2.Text.ToString());
            
             cmd.ExecuteNonQuery();
 
@@ -173,10 +172,15 @@ namespace frm_Telefon_Rehberi_Ajanda
 
         }
 
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+          //  maskedTextBox1.Text = dateTimePicker1.Value.ToLongDateString();
+        }
+
         private void frmAjanda_Load(object sender, EventArgs e)
         {
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "dd.MM.yyyy";
+            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
             dateTimePicker2.CustomFormat = "HH.mm.ss";
             KayitlariListele();

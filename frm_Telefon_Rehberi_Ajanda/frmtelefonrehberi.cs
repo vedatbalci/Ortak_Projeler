@@ -19,10 +19,7 @@ namespace frm_Telefon_Rehberi_Ajanda
         {
             InitializeComponent();
         }
-        public void Hatırlat()
-        {
-
-        }
+       
         XmlDocument xdoc = new XmlDocument();
         //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-8J65VLQ\MSSQLSERVER2017;Initial Catalog=telefon_rehberi_ajanda;Integrated Security=True");
         SqlDataAdapter da;
@@ -36,7 +33,27 @@ namespace frm_Telefon_Rehberi_Ajanda
         #region Ev Baglantisi
         SqlConnection con = new SqlConnection(@"Data Source=ODABILGISAYARı;Initial Catalog=telefon_rehberi_ajanda;Integrated Security=True");
         #endregion
-        public void hatırlat()
+        public void HatırlatAjanda()
+        {
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("Select * from Ajanda where istarihi=convert(date,getdate())", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                var liste = dt.Rows.Cast<DataRow>().Select(x => x[1].ToString()).Aggregate((i, x) => i + Environment.NewLine + x);
+                
+                DialogResult dialog = MessageBox.Show(liste, "Bu Sayıda bugün Ajanda Kaydınız var bu kayıtlara bakmanız gerekir", MessageBoxButtons.OKCancel, MessageBoxIcon.Information); ;
+                con.Close();
+                KayitlariListele();
+
+
+
+
+
+            }
+        }
+        public void hatırlatdogumgunu()
         {
             con.Open();
             SqlDataAdapter da = new SqlDataAdapter("Select * from Kisiler where dogumtarihi=convert(date,getdate())", con);
@@ -44,29 +61,19 @@ namespace frm_Telefon_Rehberi_Ajanda
             da.Fill(dt);
             if (dt.Rows.Count > 0)
             {
-                var liste = dt.Rows.Cast<DataRow>().Select(x => x[1].ToString()).Aggregate((i, x) => i + Environment.NewLine + x);
-                DialogResult dialog= MessageBox.Show(liste, "Bugün doğum günü olanlar.", MessageBoxButtons.OKCancel, MessageBoxIcon.Information); ;
-                if (DialogResult.OK==dialog)
-                {
-                    this.Hide();
-                    frmtelefonrehberi frm = new frmtelefonrehberi();
-                    frm.Show();
-                    KayitlariListele();
-                    
-                }
-                if (DialogResult.Cancel == dialog)
-                {
-                    this.Show();
-                    
-                }
+                var liste = dt.Rows.Cast<DataRow>().Select(x => x[0].ToString()).Aggregate((i, x) => i + Environment.NewLine + x);
+                DialogResult dialog = MessageBox.Show(liste, "Bugün doğum günü olanlar.", MessageBoxButtons.OKCancel, MessageBoxIcon.Information); ;
+                con.Close();
+                KayitlariListele();
 
 
 
-
-                }
 
 
             }
+
+
+        }
         private void Ara()
         {
             //try
@@ -236,12 +243,12 @@ namespace frm_Telefon_Rehberi_Ajanda
         }
         private void frmtelefonrehberi_Load(object sender, EventArgs e)
         {
-            
+
             KayitlariListele();
-            //hatırlat();
-            
-            
-           
+            hatırlatdogumgunu();
+            HatırlatAjanda();
+
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -342,31 +349,31 @@ namespace frm_Telefon_Rehberi_Ajanda
 
                 con.Open();
 
-            SqlCommand cmd = new SqlCommand("UPDATE Kisiler Set ad=@ad,soyad=@soyad,telefonno=@no,isno=@is,dogumtarihi=@tarih,Cinsiyet=@si where Id=" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "", con);
-            // cmd.Parameters.AddWithValue("@ProgramDosyasi", dataGridView1.CurrentRow.Cells[1].Value.ToString());
-            cmd.Parameters.AddWithValue("@ad", dataGridView1.CurrentRow.Cells[1].Value.ToString());
-            cmd.Parameters.AddWithValue("@soyad", dataGridView1.CurrentRow.Cells[2].Value.ToString());
-            cmd.Parameters.AddWithValue("@no", dataGridView1.CurrentRow.Cells[3].Value.ToString());
-            cmd.Parameters.AddWithValue("@is", dataGridView1.CurrentRow.Cells[4].Value.ToString());
-            cmd.Parameters.AddWithValue("@tarih", dataGridView1.CurrentRow.Cells[5].Value.ToString());
-            cmd.Parameters.AddWithValue("@si", dataGridView1.CurrentRow.Cells[6].Value.ToString());
-            cmd.ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand("UPDATE Kisiler Set ad=@ad,soyad=@soyad,telefonno=@no,isno=@is,dogumtarihi=@tarih,Cinsiyet=@si where Id=" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "", con);
+                // cmd.Parameters.AddWithValue("@ProgramDosyasi", dataGridView1.CurrentRow.Cells[1].Value.ToString());
+                cmd.Parameters.AddWithValue("@ad", dataGridView1.CurrentRow.Cells[1].Value.ToString());
+                cmd.Parameters.AddWithValue("@soyad", dataGridView1.CurrentRow.Cells[2].Value.ToString());
+                cmd.Parameters.AddWithValue("@no", dataGridView1.CurrentRow.Cells[3].Value.ToString());
+                cmd.Parameters.AddWithValue("@is", dataGridView1.CurrentRow.Cells[4].Value.ToString());
+                cmd.Parameters.AddWithValue("@tarih", dataGridView1.CurrentRow.Cells[5].Value.ToString());
+                cmd.Parameters.AddWithValue("@si", dataGridView1.CurrentRow.Cells[6].Value.ToString());
+                cmd.ExecuteNonQuery();
 
-            con.Close();
+                con.Close();
 
-            KayitlariListele();
-            con.Close();
+                KayitlariListele();
+                con.Close();
 
 
-            //MessageBox.Show("Kişi Güncellendi", "Güncelleme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Kişi Güncellendi", "Güncelleme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-        }
+            }
             catch (Exception hata)
             {
 
                 MessageBox.Show("Lütfen Elle Yeni Kişi Ekleme butonuna tıklayınız !!!", "uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-}
+        }
 
         private void button1_Click1(object sender, EventArgs e)
         {
@@ -449,8 +456,8 @@ namespace frm_Telefon_Rehberi_Ajanda
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-           
-            
+
+
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
