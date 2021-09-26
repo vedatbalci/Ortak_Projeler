@@ -17,16 +17,7 @@ namespace frm_Telefon_Rehberi_Ajanda
 {
     public partial class frmGiris : Form
     {
-        //nsdjksbfseadljkfnsedlfnbwselnıkf
-        //Merhaba Arkadaşlar
-        //Merhaba Arkadaşlar
-        //Provider=SQLNCLI11;Data Source=DESKTOP-8J65VLQ\MSSQLSERVER2017;Integrated Security=SSPI;Initial Catalog=telefon_rehberi_ajanda
-        //Data Source=DESKTOP-8J65VLQ\MSSQLSERVER2017;Initial Catalog=telefon_rehberi_ajanda;Integrated Security=True
-        public frmGiris()
-//sss
-        {
-            InitializeComponent();
-        }
+
         public class INIKaydet
         {
             [DllImport("kernel32")]
@@ -52,6 +43,17 @@ namespace frm_Telefon_Rehberi_Ajanda
                 return WritePrivateProfileString(bolum, ayaradi, deger, DOSYAYOLU);
             }
         }
+        //nsdjksbfseadljkfnsedlfnbwselnıkf
+        //Merhaba Arkadaşlar
+        //Merhaba Arkadaşlar
+        //Provider=SQLNCLI11;Data Source=DESKTOP-8J65VLQ\MSSQLSERVER2017;Integrated Security=SSPI;Initial Catalog=telefon_rehberi_ajanda
+        //Data Source=DESKTOP-8J65VLQ\MSSQLSERVER2017;Initial Catalog=telefon_rehberi_ajanda;Integrated Security=True
+        public frmGiris()
+        //sss
+        {
+            InitializeComponent();
+        }
+
         //OdaBilgisayarı
         #region Okul Baglantisi
         //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-8J65VLQ\MSSQLSERVER2017;Initial Catalog=telefon_rehberi_ajanda;Integrated Security=True");
@@ -67,7 +69,13 @@ namespace frm_Telefon_Rehberi_Ajanda
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            INIKaydet ini = new INIKaydet(Application.StartupPath + @"\Ayarlar.ini");
             pictureBox1.BackgroundImage = Properties.Resources.şifre_yöneticisi2;
+            if (File.Exists(Application.StartupPath + @"\Ayarlar.ini"))
+            {
+                txtKullaniciAdi.Text = Convert.ToString(ini.Oku("KullaniciAdi", "textbox1"));
+
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -129,14 +137,14 @@ namespace frm_Telefon_Rehberi_Ajanda
             if (checkBox1.Checked)
             {
                 checkBox1.Text = "Şifreyi Gizle";
-                
+
                 txtSifre.PasswordChar = '\0';
             }
-            
+
             else
             {
                 checkBox1.Text = "Şifreyi Göster";
-               
+
                 txtSifre.PasswordChar = '*';
             }
         }
@@ -176,6 +184,11 @@ namespace frm_Telefon_Rehberi_Ajanda
 
         private void frmGiris_FormClosing(object sender, FormClosingEventArgs e)
         {
+            INIKaydet ini = new INIKaydet(Application.StartupPath + @"\Ayarlar.ini");
+
+
+
+            ini.Yaz("KullaniciAdi", "textbox1", txtKullaniciAdi.Text);
 
         }
     }

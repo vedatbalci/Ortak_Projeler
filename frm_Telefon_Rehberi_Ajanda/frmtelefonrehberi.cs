@@ -19,6 +19,10 @@ namespace frm_Telefon_Rehberi_Ajanda
         {
             InitializeComponent();
         }
+        public void Hatırlat()
+        {
+
+        }
         XmlDocument xdoc = new XmlDocument();
         //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-8J65VLQ\MSSQLSERVER2017;Initial Catalog=telefon_rehberi_ajanda;Integrated Security=True");
         SqlDataAdapter da;
@@ -40,87 +44,168 @@ namespace frm_Telefon_Rehberi_Ajanda
             da.Fill(dt);
             if (dt.Rows.Count > 0)
             {
-                var liste = dt.Rows.Cast<DataRow>().Select(x => x[1].ToString()).Aggregate((i, x) => i + Environment.NewLine + x);//x[0] sütun numrası
-                MessageBox.Show(liste, "Bugün doğum günü olanlar.",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                var liste = dt.Rows.Cast<DataRow>().Select(x => x[1].ToString()).Aggregate((i, x) => i + Environment.NewLine + x);
+                DialogResult dialog= MessageBox.Show(liste, "Bugün doğum günü olanlar.", MessageBoxButtons.OKCancel, MessageBoxIcon.Information); ;
+                if (DialogResult.OK==dialog)
+                {
+                    this.Hide();
+                    frmtelefonrehberi frm = new frmtelefonrehberi();
+                    frm.Show();
+                    KayitlariListele();
+                    
+                }
+                if (DialogResult.Cancel == dialog)
+                {
+                    this.Show();
+                    
+                }
+
+
+
+
+                }
+
+
             }
-        }
         private void Ara()
         {
             //try
             //{
             if (rdbİsim.Checked)
             {
+
                 con.Open();
                 System.Data.DataTable dt = new System.Data.DataTable();
                 da = new SqlDataAdapter("Select * from Kisiler Where ad LIKE '%" + txtAra.Text + "%'", con);
 
-                dataGridView1.DataSource = dt;
-                da.Fill(dt);
-                da.Dispose();
-                con.Close();
+                if (da == new SqlDataAdapter("Select * from Kisiler Where ad LIKE '%" + txtAra.Text + "%'", con))
+                {
+                    dataGridView1.DataSource = dt;
+                    da.Fill(dt);
+                    da.Dispose();
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Bir sonuç bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
             }
-            if (rdbSoyad.Checked)
+            else if (rdbSoyad.Checked)
             {
                 con.Open();
                 System.Data.DataTable dt = new System.Data.DataTable();
                 da = new SqlDataAdapter("Select * from Kisiler Where soyad LIKE '%" + txtAra.Text + "%'", con);
 
-                dataGridView1.DataSource = dt;
-                da.Fill(dt);
-                da.Dispose();
-                con.Close();
+                if (da == new SqlDataAdapter("Select * from Kisiler Where soyad LIKE '%" + txtAra.Text + "%'", con))
+                {
+                    dataGridView1.DataSource = dt;
+                    da.Fill(dt);
+                    da.Dispose();
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Bir sonuç bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
             }
-            if (rdbtelefon.Checked)
+            else if (rdbtelefon.Checked)
             {
                 con.Open();
                 System.Data.DataTable dt = new System.Data.DataTable();
                 da = new SqlDataAdapter("Select * from Kisiler Where telefonno LIKE '%" + txtAra.Text + "%'", con);
+                if (da == new SqlDataAdapter("Select * from Kisiler Where telefonno LIKE '%" + txtAra.Text + "%'", con))
+                {
+                    dataGridView1.DataSource = dt;
+                    da.Fill(dt);
+                    da.Dispose();
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Bir sonuç bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                dataGridView1.DataSource = dt;
-                da.Fill(dt);
-                da.Dispose();
-                con.Close();
+                }
+
+
+
             }
-            if (rdbİs.Checked)
+            else if (rdbİs.Checked)
             {
                 con.Open();
                 System.Data.DataTable dt = new System.Data.DataTable();
                 da = new SqlDataAdapter("Select * from Kisiler Where isno LIKE '%" + txtAra.Text + "%'", con);
 
-                dataGridView1.DataSource = dt;
-                da.Fill(dt);
-                da.Dispose();
-                con.Close();
+                if (da == new SqlDataAdapter("Select * from Kisiler Where isno LIKE '%" + txtAra.Text + "%'", con))
+                {
+                    dataGridView1.DataSource = dt;
+                    da.Fill(dt);
+                    da.Dispose();
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Bir sonuç bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
             }
-            if (rdbDogum.Checked)
+            else if (rdbDogum.Checked)
             {
                 con.Open();
                 System.Data.DataTable dt = new System.Data.DataTable();
                 da = new SqlDataAdapter("Select * from Kisiler Where dogumtarihi LIKE '%" + txtAra.Text + "%'", con);
 
-                dataGridView1.DataSource = dt;
-                da.Fill(dt);
-                da.Dispose();
-                con.Close();
+                if (da == new SqlDataAdapter("Select * from Kisiler Where dogumtarihi LIKE '%" + txtAra.Text + "%'", con))
+                {
+                    dataGridView1.DataSource = dt;
+                    da.Fill(dt);
+                    da.Dispose();
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Bir sonuç bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
             }
-            if (rdbCinsiyet.Checked)
+            else if (rdbCinsiyet.Checked)
             {
                 con.Open();
                 System.Data.DataTable dt = new System.Data.DataTable();
                 da = new SqlDataAdapter("Select * from Kisiler Where Cinsiyet LIKE '%" + txtAra.Text + "%'", con);
 
-                dataGridView1.DataSource = dt;
-                da.Fill(dt);
-                da.Dispose();
-                con.Close();
+                if (da == new SqlDataAdapter("Select * from Kisiler Where Cinsiyet LIKE '%" + txtAra.Text + "%'", con))
+                {
+                    dataGridView1.DataSource = dt;
+                    da.Fill(dt);
+                    da.Dispose();
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Bir sonuç bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Uyarı", "Lütfen bir arama kriteri seciniz !!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                KayitlariListele();
+            }
+            if (txtAra.Text == "" || txtAra.Text == " ")
+            {
+                MessageBox.Show("Uyarı", "Lütfen bir arama icin bir kelime yazınız !!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                KayitlariListele();
             }
 
 
+            con.Close();
 
             //}
             //catch (Exception)
             //{
-            //    // MessageBox.Show("Uyarı","Lütfen Program_Ara nın yanindaki yazı yazma yerine sağ tıklayıp bir ayar seçiniz !!!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+
             //}
         }
 
@@ -145,19 +230,23 @@ namespace frm_Telefon_Rehberi_Ajanda
             }
             catch (Exception)
             {
-               
+
             }
-        
+
         }
         private void frmtelefonrehberi_Load(object sender, EventArgs e)
         {
-           
+            
             KayitlariListele();
-        //    hatırlat();
+            //hatırlat();
+            
+            
+           
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            lblZaman.Text = DateTime.Now.ToLongTimeString();
             lblZaman.Text = DateTime.Now.ToLongTimeString();
         }
 
@@ -247,65 +336,63 @@ namespace frm_Telefon_Rehberi_Ajanda
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            //try
-            //{
+            try
+            {
 
 
-                    con.Open();
+                con.Open();
 
-                    SqlCommand cmd = new SqlCommand("UPDATE Kisiler Set ad=@ad,soyad=@soyad,telefonno=@no,isno=@is,dogumtarihi=@tarih,Cinsiyet=@si where Id=" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "", con);
-                    // cmd.Parameters.AddWithValue("@ProgramDosyasi", dataGridView1.CurrentRow.Cells[1].Value.ToString());
-                    cmd.Parameters.AddWithValue("@ad", dataGridView1.CurrentRow.Cells[1].Value.ToString());
-                    cmd.Parameters.AddWithValue("@soyad", dataGridView1.CurrentRow.Cells[2].Value.ToString());
-                    cmd.Parameters.AddWithValue("@no", dataGridView1.CurrentRow.Cells[3].Value.ToString());
-                    cmd.Parameters.AddWithValue("@is", dataGridView1.CurrentRow.Cells[4].Value.ToString());
-                    cmd.Parameters.AddWithValue("@tarih", dataGridView1.CurrentRow.Cells[5].Value.ToString());
-                    cmd.Parameters.AddWithValue("@si", dataGridView1.CurrentRow.Cells[6].Value.ToString());
-                    cmd.ExecuteNonQuery();
-
-                    con.Close();
-               
-                    KayitlariListele();
-                
-
-                //MessageBox.Show("Kişi Güncellendi", "Güncelleme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //}
-            //catch (Exception hata)
-            //{
-
-            //    MessageBox.Show("Lütfen Elle Yeni Kişi Ekleme butonuna tıklayınız !!!", "uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-        }
-
-        private void button1_Click1(object sender, EventArgs e)
-        {
-
-            con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO Kisiler (ad,soyad,telefonno,isno,dogumtarihi,Cinsiyet) VALUES (@ad,@soyad,@telno,@is,@dgmtarihi,@cins)", con);
+            SqlCommand cmd = new SqlCommand("UPDATE Kisiler Set ad=@ad,soyad=@soyad,telefonno=@no,isno=@is,dogumtarihi=@tarih,Cinsiyet=@si where Id=" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "", con);
             // cmd.Parameters.AddWithValue("@ProgramDosyasi", dataGridView1.CurrentRow.Cells[1].Value.ToString());
-
-            cmd.Parameters.AddWithValue("@ad", "");
-            cmd.Parameters.AddWithValue("@soyad", "");
-            cmd.Parameters.AddWithValue("@telno", "");
-            cmd.Parameters.AddWithValue("@is", "");
-            cmd.Parameters.AddWithValue("@dgmtarihi", "");
-            cmd.Parameters.AddWithValue("@cins", "");
+            cmd.Parameters.AddWithValue("@ad", dataGridView1.CurrentRow.Cells[1].Value.ToString());
+            cmd.Parameters.AddWithValue("@soyad", dataGridView1.CurrentRow.Cells[2].Value.ToString());
+            cmd.Parameters.AddWithValue("@no", dataGridView1.CurrentRow.Cells[3].Value.ToString());
+            cmd.Parameters.AddWithValue("@is", dataGridView1.CurrentRow.Cells[4].Value.ToString());
+            cmd.Parameters.AddWithValue("@tarih", dataGridView1.CurrentRow.Cells[5].Value.ToString());
+            cmd.Parameters.AddWithValue("@si", dataGridView1.CurrentRow.Cells[6].Value.ToString());
             cmd.ExecuteNonQuery();
+
             con.Close();
-            //con.Dispose();
-            //dataGridView1.SelectionMode = DataGridViewSelectionMode.FullColumnSelect;
+
             KayitlariListele();
             con.Close();
 
-            this.Cursor = Cursors.Arrow;
 
-            MessageBox.Show("Yeni Kişi Kaydı Yapıldı...", "Kaydet İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-            //catch (Exception hata)
-            //{
-            //    MessageBox.Show(hata.Message);
-            //}
+            //MessageBox.Show("Kişi Güncellendi", "Güncelleme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+            catch (Exception hata)
+            {
+
+                MessageBox.Show("Lütfen Elle Yeni Kişi Ekleme butonuna tıklayınız !!!", "uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+}
+
+        private void button1_Click1(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("INSERT INTO Kisiler (ad,soyad,telefonno,isno,dogumtarihi,Cinsiyet) VALUES (@ad,@soyad,@telno,@is,@dgmtarihi,@cins)", con);
+
+
+                cmd.Parameters.AddWithValue("@ad", "");
+                cmd.Parameters.AddWithValue("@soyad", "");
+                cmd.Parameters.AddWithValue("@telno", "");
+                cmd.Parameters.AddWithValue("@is", "");
+                cmd.Parameters.AddWithValue("@dgmtarihi", "2021-09-26");
+                cmd.Parameters.AddWithValue("@cins", "");
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                KayitlariListele();
+
+                MessageBox.Show("Yeni Kişi Kaydı Yapıldı...", "Kaydet İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show(hata.Message);
+            }
         }
 
         private void button1_Clidsdasdas(object sender, EventArgs e)
@@ -362,7 +449,8 @@ namespace frm_Telefon_Rehberi_Ajanda
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            lblZaman.Text = DateTime.Now.ToLongTimeString();
+           
+            
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
